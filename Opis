@@ -55,7 +55,7 @@ Moguća odstupanja:
 
 
 -------------------------------------------------------
-UC2 Potvrda Reg.
+UC2 Potvrda Registracije
 -------------------------------------------------------
 
 Glavni aktor: Korisnik
@@ -64,13 +64,13 @@ Ostali aktori: AI backend
 Preduvjeti: Napravljena registracija (UC1)
 
 Glavni tijek: 
-1. Korisnik prima mail
-2. Korisnik klika na link
-3. Reg. se potvrđuje/pohranjuje u sustavu
+1. Korisnik prima mail s linkom za registraciju.
+2. Korisnik klika na link.
+3. Registracije se potvrđuje/pohranjuje u sustavu.
 
 Odstupanje:
-2.a.1 Korisnik NE potvrđuje reg. putem linka
-2.a.2 Reg. se briše
+2.a.1 Korisnik NE potvrđuje reg. putem linka u roku od 24 h.
+2.a.2 Registracije se briše
 
 
 -------------------------------------------------------
