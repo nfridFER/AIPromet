@@ -15,11 +15,103 @@ Sustav će biti realiziran kao web i mobilna aplikacija preko koje će korisnici
 Sustav će u stvarnom vremenu prikupljati informacije iz vanjskih servisa kao što su HAK, Google Maps, ServisXYZ (koji obrađuje snimke s nadzornih kamera na raskrižjima i dronova te daje informacije u obliku teksta preko specijaliziranog API-ja).
 
 
-Korisnik otvara račun u sustavu tako što odabire opciju registracije, unosi svoje podatke (email, pass...) i potvrđuje registraciju. Sustav zatim šalje mail potvrde na upisanu email adresu, i korisnik to mora potvrditi u roku 24h. Ako da, otvara se račun. Inače, račun se briše.
+*************************************
+WEB APP
+*************************************
+Korisnik otvara račun u sustavu tako što odabire opciju registracije, unosi svoje podatke (email, pass...) i potvrđuje registraciju. Sustav zatim šalje mail potvrde na upisanu email adresu, i korisnik to mora potvrditi u roku 24h. Ako korisnik potvrdi registraciju, otvara se račun. U suprotnom, račun se briše.
 
-Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik najprije odabire opciju pregleda stanja u prometu. Zatim sustav prikazuje ekran za unos lokacije (način unosa? s karte, povijesne lokacije, favoriti...). Korisnik odabire lokaciju, a sustav dohvaća i prikazuje podatke. Nakon što su podaci prikazani, korisniku se prikazuju i dodatne mogućnosti kao što su prijedlog rute od trenutne lokacije, prijedlog rute od neke druge lokacije, pohrana lokacije u favorite...
+Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik najprije odabire opciju pregleda stanja u prometu. Zatim sustav prikazuje ekran za unos lokacije (način unosa? s karte, povijesne lokacije, favoriti...). Korisnik odabire lokaciju, a sustav dohvaća i prikazuje podatke. Nakon što su podaci prikazani, korisniku se prikazuju i dodatne mogućnosti kao što su prijedlog rute do odabrane lokacije, pohrana lokacije u favorite.
 
 Sustav nudi i opciju planiranja putovanja. Korisnik treba unijeti početnu i završnu lokaciju i željeni način transporta (pješice, javni prijevoz, bicikl, automobil...).
+
+
+
+-------------------------------------------------------
+UC1 Registracija 
+-------------------------------------------------------
+
+Opis: Registracija novog korisnika u web aplikaciji
+
+Glavni aktor: Korisnik
+Ostali aktori: AI backend
+
+Preduvjeti: -
+
+Glavni tijek: 
+1.Korisnik odabire opciju registracije
+2. Sustav prikazuje formu za podatke..
+3. Korisnik unosi podatke (email, pass...)
+4. Korisnik potvrđuje reg.
+5. Sustav pohranjuje podatke i šalje mail potvrde (nastavak UC2).
+
+
+Moguća odstupanja:
+
+4.a.1 Korisnik odustaje
+4.a.2. Sustav se vraća na početnu stranicu
+5.a.1. mail već postoji
+5.a.2. Sustav obavještava korisnika da mail postoji...
+5.b.1. mail adresa ne postoji 
+5.b.2....
+
+
+-------------------------------------------------------
+UC2 Potvrda Reg.
+-------------------------------------------------------
+
+Glavni aktor: Korisnik
+Ostali aktori: AI backend
+
+Preduvjeti: Napravljena registracija (UC1)
+
+Glavni tijek: 
+1. Korisnik prima mail
+2. Korinsik klika na link
+3. Reg. se potvrđuje/pohranjuje u sustavu
+
+Odstupanje:
+2.a.1 Korinsik NE potvrđuje reg. putem linka
+2.a.2 Reg. se briše
+
+
+-------------------------------------------------------
+UC3 Pregled stanja u prometu
+-------------------------------------------------------
+
+Preduvjet:korisnik mora biti prijavljen u sustav
+
+Glavni tijek:
+1. Korisnik najprije odabire opciju pregleda stanja u prometu.
+2. Unos lokacije (UC4 Unos lokacije)
+3. Sustav dohvaća i prikazuje podatke
+4. korisniku se prikazuju i dodatne mogućnosti: 
+	a) prijedlog rute do te lokacije (UC5)
+	b) pohranjivanje lokacije u favorite
+
+
+-------------------------------------------------------
+UC4 Unos lokacije
+-------------------------------------------------------
+
+...TODO
+
+
+-------------------------------------------------------
+UC5 Planiranje putovanja
+-------------------------------------------------------
+
+1. Korisnik odabire opciju
+2. Sustav traži unos poč. lokacije (UC4)
+3. Sustav traži unos karjnjeg odredišta (UC4)
+4. Sustav traži odabir načina transporta
+5. Korinsik odabire transport i potvrđuje odabir
+6. Sustav računa put...
+
+
+
+
+
+
 
 
 
