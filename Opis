@@ -1,11 +1,11 @@
-**************************************************************************
+****************************************************************************************************************
 Personalizirani AI sustav za praćenje stanja u prometu
-**************************************************************************
+****************************************************************************************************************
 
 SUSTAV
-	|-- Web APP
-	|-- Mob APP
-	|-- AI Backend
+	|-- Web APP (Korisnik, Admin, podatke dobiva od AI backenda)
+	|-- Mob APP (Korisnik, podatke dobiva od AI backenda)
+	|-- AI Backend (Admin, vanjski servisi)
 
 
 
@@ -15,7 +15,7 @@ Sustav će biti realiziran kao web i mobilna aplikacija preko koje će korisnici
 Sustav će u stvarnom vremenu prikupljati informacije iz vanjskih servisa kao što su HAK, Google Maps, ServisXYZ (koji obrađuje snimke s nadzornih kamera na raskrižjima i dronova te daje informacije u obliku teksta preko specijaliziranog API-ja).
 
 
-Korisnik otvara račun u sustavu tako što odabire opciju registracije, unosi svoje podatke (email, pass...) i potvrđuje registraciju. Sustav zatim šaljem mail potvrde na upisanu email adresu, i korisnik to mora potvrditi u roku 24h. Ako da, otvara se račun. Inače, račun se briše.
+Korisnik otvara račun u sustavu tako što odabire opciju registracije, unosi svoje podatke (email, pass...) i potvrđuje registraciju. Sustav zatim šalje mail potvrde na upisanu email adresu, i korisnik to mora potvrditi u roku 24h. Ako da, otvara se račun. Inače, račun se briše.
 
 Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik najprije odabire opciju pregleda stanja u prometu. Zatim sustav prikazuje ekran za unos lokacije (način unosa? s karte, povijesne lokacije, favoriti...). Korisnik odabire lokaciju, a sustav dohvaća i prikazuje podatke. Nakon što su podaci prikazani, korisniku se prikazuju i dodatne mogućnosti kao što su prijedlog rute od trenutne lokacije, prijedlog rute od neke druge lokacije, pohrana lokacije u favorite...
 
