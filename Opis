@@ -20,7 +20,7 @@ WEB APP
 *************************************
 Korisnik otvara račun u sustavu tako što odabire opciju registracije, unosi svoje podatke (email, pass...) i potvrđuje registraciju. Sustav zatim šalje mail potvrde na upisanu email adresu, i korisnik to mora potvrditi u roku 24h. Ako korisnik potvrdi registraciju, otvara se račun. U suprotnom, račun se briše.
 
-Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik najprije odabire opciju pregleda stanja u prometu. Zatim sustav prikazuje ekran za unos lokacije (način unosa? s karte, povijesne lokacije, favoriti...). Korisnik odabire lokaciju, a sustav dohvaća i prikazuje podatke. Nakon što su podaci prikazani, korisniku se prikazuju i dodatne mogućnosti kao što su prijedlog rute do odabrane lokacije, pohrana lokacije u favorite.
+Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik najprije odabire opciju pregleda stanja u prometu. Zatim sustav prikazuje ekran za unos lokacije (način unosa? s karte ili odabirom s popisa: povijesne lokacije, favoriti...). Korisnik odabire lokaciju, a sustav dohvaća i prikazuje podatke. Nakon što su podaci prikazani, korisniku se prikazuju i dodatne mogućnosti kao što su prijedlog rute do odabrane lokacije, pohrana lokacije u favorite.
 
 Sustav nudi i opciju planiranja putovanja. Korisnik treba unijeti početnu i završnu lokaciju i željeni način transporta (pješice, javni prijevoz, bicikl, automobil...).
 
