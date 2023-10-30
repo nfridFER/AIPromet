@@ -37,19 +37,20 @@ Preduvjeti: -
 
 Glavni tijek: 
 1. Korisnik odabire opciju registracije.
-2. Sustav prikazuje formu za unos podataka.
-3. Korisnik unosi podatke (email, pass...) i kad je gotov potvrđuje reg.
-4. Sustav pohranjuje podatke i šalje mail potvrde (nastavak UC2).
+2. Web aplikacija prikazuje formu za unos podataka.
+3. Korisnik unosi podatke (email, pass...) i potvrđuje registraciju (submit).
+4. Web aplikacija prosljeđuje podatke AI Backendu koji provjerava podatke i ako je sve u redu AI Backend pohranjuje podatke.
+5. Web aplikacija korisniku šalje mail potvrde (nastavak UC2).
 
 
 Moguća odstupanja:
 
-3.a.1 Korisnik odustaje od registracije.
-3.a.2. Sustav se vraća na početnu stranicu.
+3.a.1 Korisnik odustaje od registracije (cancel).
+3.a.2. Web aplikacija se vraća na početnu stranicu.
 4.a.1. U sustavu već postoji korisnik s tom mail adresom.
-4.a.2. Sustav obavještava korisnika da mail postoji...
+4.a.2. Web aplikacija obavještava korisnika da mail postoji...
 4.b.1. Mail adresa nije ispravna
-4.b.2. Sustav obavještava korisnika da mail nije ispravan.
+4.b.2. Web aplikacija obavještava korisnika da mail nije ispravan.
 
 
 -------------------------------------------------------
