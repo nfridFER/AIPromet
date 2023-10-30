@@ -1,27 +1,25 @@
 ****************************************************************************************************************
-Personalizirani AI sustav za praćenje stanja u prometu
+PERSONALIZIRANI AI SUSTAV ZA PRAĆENJE STANJA U PROMETU
 ****************************************************************************************************************
 
-SUSTAV
-	|-- Web APP (Korisnik, Admin, podatke dobiva od AI backenda)
-	|-- Mob APP (Korisnik, podatke dobiva od AI backenda)
-	|-- AI Backend (Admin, vanjski servisi)
+OSNOVNI OPIS:
+Ideja projekta je realizacija sustava koji će se temeljiti na najnovijim dostignućima u području AI-ja i pružati svojim korisnicima personalizirane informacije o stanju u prometu, omogućavati planiranje putovanja itd.
+Sustav će u stvarnom vremenu prikupljati podatke o stanju na cesti iz vanjskih servisa kao što su HAK, Google Maps, ServisXYZ (koji obrađuje snimke s nadzornih kamera na raskrižjima i dronova te daje informacije u obliku teksta preko specijaliziranog API-ja), obrađivati te podatke pomoću AI-ja te na temelju njih davati korisnicima informacije o trenutnom stanju u prometu kao i prijedloge ruta.
 
+DIJELOVI SUSTAVA:
+Sustav će se sastojati od više manjih podsustava čije su odgovornosti kako slijedi: 
+	1. AI BACKEND – prikupljanje podataka iz vanjskih servisa (HAK, Google Maps,…), obrada podataka i izračuni; pohrana podataka o korisnicima sustava.
+	2. WEB APLIKACIJA – web sučelje prema korisnicima (frontend + minimalni backend)  osim čistog UI-ja, izvođenje funkcionalnosti u suradnji s AI Backendom (npr. kod prijave korisnika u sustav, web app dohvaća podatke s AI backenda, ali sama vodi računa o sjednici, pravima pristupa korisnika itd.)
+		- Web aplikacija će služiti i kao administratorsko sučelje prema AI backendu.
+	3. MOBILNA APLIKACIJA – mob. sučelje prema korisnicima; osim čistog UI-ja, izvođenje funkcionalnosti u suradnji s AI Backendom (npr. kod prijave korisnika u sustav, web app dohvaća podatke s AI backenda, ali sama vodi računa o sjednici, pravima pristupa korisnika itd.)
 
-
-Ideja projekta je realizacija sustava koji će se temeljiti na najnovijim dostignućima u području AI-ja i pružati svojim korisnicima personalizirane informacije o stanju u prometu.
-
-Sustav će biti realiziran kao web i mobilna aplikacija preko koje će korisnici moći dobivati informacije. 
-Sustav će u stvarnom vremenu prikupljati informacije iz vanjskih servisa kao što su HAK, Google Maps, ServisXYZ (koji obrađuje snimke s nadzornih kamera na raskrižjima i dronova te daje informacije u obliku teksta preko specijaliziranog API-ja).
 
 
 *************************************
 WEB APP
 *************************************
 Korisnik otvara račun u sustavu tako što odabire opciju registracije, unosi svoje podatke (email, pass...) i potvrđuje registraciju. Sustav zatim šalje mail potvrde na upisanu email adresu, i korisnik to mora potvrditi u roku 24h. Ako korisnik potvrdi registraciju, otvara se račun. U suprotnom, račun se briše.
-
 Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik najprije odabire opciju pregleda stanja u prometu. Zatim sustav prikazuje ekran za unos lokacije (način unosa? s karte ili odabirom s popisa: povijesne lokacije, favoriti...). Korisnik odabire lokaciju, a sustav dohvaća i prikazuje podatke. Nakon što su podaci prikazani, korisniku se prikazuju i dodatne mogućnosti kao što su prijedlog rute do odabrane lokacije, pohrana lokacije u favorite.
-
 Sustav nudi i opciju planiranja putovanja. Korisnik treba unijeti početnu i završnu lokaciju i željeni način transporta (pješice, javni prijevoz, bicikl, automobil...).
 
 
@@ -66,11 +64,11 @@ Preduvjeti: Napravljena registracija (UC1)
 Glavni tijek: 
 1. Korisnik prima mail s linkom za registraciju.
 2. Korisnik klika na link.
-3. Registracije se potvrđuje/pohranjuje u sustavu.
+3. Registracija se potvrđuje/pohranjuje u sustavu.
 
 Odstupanje:
 2.a.1 Korisnik NE potvrđuje reg. putem linka u roku od 24 h.
-2.a.2 Registracije se briše
+2.a.2 Registracija se briše.
 
 
 -------------------------------------------------------
