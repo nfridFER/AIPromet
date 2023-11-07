@@ -19,10 +19,14 @@ Sustav će se sastojati od više manjih podsustava čije su odgovornosti kako sl
 WEB APP
 *************************************
 Korisnik otvara račun u sustavu tako što odabire opciju registracije, unosi svoje podatke (email, pass...) i potvrđuje registraciju. Sustav zatim šalje mail potvrde na upisanu email adresu, i korisnik to mora potvrditi u roku 24h. Ako korisnik potvrdi registraciju, otvara se račun. U suprotnom, račun se briše.
-Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik najprije odabire opciju pregleda stanja u prometu. Zatim sustav prikazuje ekran za unos lokacije (način unosa? s karte ili odabirom s popisa: povijesne lokacije, favoriti...). Korisnik odabire lokaciju, a sustav dohvaća i prikazuje podatke. Nakon što su podaci prikazani, korisniku se prikazuju i dodatne mogućnosti kao što su prijedlog rute do odabrane lokacije, pohrana lokacije u favorite.
-Sustav nudi i opciju planiranja putovanja. Korisnik treba unijeti početnu i završnu lokaciju i željeni način transporta (pješice, javni prijevoz, bicikl, automobil...).
 
+Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik najprije odabire opciju pregleda stanja u prometu. Zatim sustav prikazuje ekran za unos lokacije. Lokacija se može unijeti s karte ili odabirom s popisa: povijesne lokacije (sustav pamti zadnjih 10 lokacija koje je korisnik pretraživao), favoriti (do 10). Korisnik odabire lokaciju, a sustav dohvaća i prikazuje podatke. Nakon što su podaci prikazani, korisniku se prikazuju i dodatne mogućnosti kao što su prijedlog rute do odabrane lokacije, pohrana lokacije u favorite.
 
+Kod određivanja stanja u prometu, određuje se status po segmentu (ravni dio ulice s poč. i završnom točkom - lokacija). Svaka ulica se opisuje kao niz povezanih segmenata. Za dohvat podataka o stanju u prometu koristi se API od AIBackend-a...
+
+Sustav nudi i opciju planiranja putovanja. Korisnik treba minimalno unijeti početnu i završnu lokaciju i željeni način transporta (pješice, javni prijevoz, bicikl, automobil...), a može unijeti i međulokacije.
+
+Osim običnih korisnika, web aplikaciju koriste i administratori za spajanje na AI backend. Oni nemaju mogućnosti pregleda stanja u prometu, planiranja putovanja i sl., već sustav koriste za upravljanje korisničkim računima, podacima za spajanje na vanjske servise itd.
 
 -------------------------------------------------------
 UC1 Registracija 
