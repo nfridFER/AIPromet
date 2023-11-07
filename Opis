@@ -24,7 +24,7 @@ Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik na
 
 Kod određivanja stanja u prometu, određuje se status po segmentu (ravni dio ulice s poč. i završnom točkom - lokacija). Status je razina zagušenja prometa: crveno, žuto ili zeleno. Također, stanje segmenata se osvježava periodički (5 do 15 min). Za dohvat podataka o stanju u prometu koristi se API od AIBackend-a...
 
-Sustav nudi i opciju planiranja putovanja. Korisnik treba minimalno unijeti početnu i završnu lokaciju i željeni način transporta (pješice, javni prijevoz, bicikl, automobil...), a može unijeti i međulokacije. Korisnik može imati do najviše tri plana puta. Nakon što je definiran plan puta, aplikacija određuje zauzeće u prometu i računa trajanje.
+Sustav nudi i opciju planiranja putovanja. Korisnik treba minimalno unijeti početnu i završnu lokaciju i željeni način transporta (pješice, javni prijevoz, bicikl, automobil...), a može unijeti i međulokacije. Korisnik može imati do najviše tri plana puta. Nakon što je definiran plan puta, aplikacija određuje zauzeće u prometu i računa trajanje puta.
 
 Osim običnih korisnika, web aplikaciju koriste i administratori za spajanje na AI backend. Oni nemaju mogućnosti pregleda stanja u prometu, planiranja putovanja i sl., već sustav koriste za upravljanje korisničkim računima, podacima za spajanje na vanjske servise itd.
 
