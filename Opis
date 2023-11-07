@@ -22,9 +22,9 @@ Korisnik otvara račun u sustavu tako što odabire opciju registracije, unosi sv
 
 Za pregled stanja u prometu, korisnik mora biti prijavljen u sustav. Korisnik najprije odabire opciju pregleda stanja u prometu. Zatim sustav prikazuje ekran za unos lokacije. Lokacija se može unijeti s karte ili odabirom s popisa: povijesne lokacije (sustav pamti zadnjih 10 lokacija koje je korisnik pretraživao), favoriti (do 10). Korisnik odabire lokaciju, a sustav dohvaća i prikazuje podatke. Nakon što su podaci prikazani, korisniku se prikazuju i dodatne mogućnosti kao što su prijedlog rute do odabrane lokacije, pohrana lokacije u favorite.
 
-Kod određivanja stanja u prometu, određuje se status po segmentu (ravni dio ulice s poč. i završnom točkom - lokacija). Svaka ulica se opisuje kao niz povezanih segmenata. Za dohvat podataka o stanju u prometu koristi se API od AIBackend-a...
+Kod određivanja stanja u prometu, određuje se status po segmentu (ravni dio ulice s poč. i završnom točkom - lokacija). Status je razina zagušenja prometa: crveno, žuto ili zeleno. Također, stanje segmenata se osvježava periodički (5 do 15 min). Za dohvat podataka o stanju u prometu koristi se API od AIBackend-a...
 
-Sustav nudi i opciju planiranja putovanja. Korisnik treba minimalno unijeti početnu i završnu lokaciju i željeni način transporta (pješice, javni prijevoz, bicikl, automobil...), a može unijeti i međulokacije.
+Sustav nudi i opciju planiranja putovanja. Korisnik treba minimalno unijeti početnu i završnu lokaciju i željeni način transporta (pješice, javni prijevoz, bicikl, automobil...), a može unijeti i međulokacije. Korisnik može imati do najviše tri plana puta. Nakon što je definiran plan puta, aplikacija određuje zauzeće u prometu i računa trajanje.
 
 Osim običnih korisnika, web aplikaciju koriste i administratori za spajanje na AI backend. Oni nemaju mogućnosti pregleda stanja u prometu, planiranja putovanja i sl., već sustav koriste za upravljanje korisničkim računima, podacima za spajanje na vanjske servise itd.
 
