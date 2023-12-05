@@ -102,14 +102,19 @@ UC4 Unos lokacije
 UC5 Planiranje putovanja
 -------------------------------------------------------
 
-1. Korisnik odabire opciju
-2. Sustav traži unos poč. lokacije (UC4)
-3. Sustav traži unos karjnjeg odredišta (UC4)
+1. Korisnik odabire opciju planiranja putovanja
+2. Sustav prikazuje sučelje za odabir lokacije
+3. Korisnik unosi lokacije (početak, kraj i međuodredišta)
 4. Sustav traži odabir načina transporta
-5. Korinsik odabire transport i potvrđuje odabir
-6. Sustav računa put...
+5. Korisnik odabire transport i potvrđuje odabir
+6. Sustav računa put...i prikazuje detalje
 
 
+
+
+Razrada PLANIRANJA putovanja:
+
+Korisnik s početnog ekrana (Home) odabire opciju planiranja putovanja na što mu se otvara ekran za planiranje putovanja. Najprije treba odabrati lokaciju, a zatim način prijevoza. Korisnik treba minimalno odabrati dvije lokacije (polazište i odredište), ali može ih odabrati još. Kad je gotov s odabirom lokacija i prijevoza, provjerava se ovaj uvjet (dvije lokacije) i ako je sve u redu, prikazuju mu se detalji puta, inače se vraća na odabir lokacija. Kod pregleda detalja puta korisnik može potvrditi svoj odabir i plan puta se pohranjuje, a može i odustati te se tada svi podaci brišu i vraća se na Home.Kod odabira lokacije, korisniku se u glavnom dijelu ekrana prikazuje se karta i korisnik može unijeti lokaciju u obliku adrese, aktivacijom GPS-a ili "pikanjem" po krati. Uz glavni dio ekrana, sa strane ima dva zasebna okvira - popis povijesnih lokacija i popis favorita. Ova dva popisa su vidljiva cijelo vrijeme dok god se odabire lokacija i ako korisnik odabere neku stavku iz popisa, u tom okviru će mu se prikazati detalji te stavke te ima mogućnost odabira te lokacije ili povratka natrag.
 
 
 
